@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #output {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="demo1" id="demo">Select operation you want to perform</label><br>
+    <div class="string" name="methods" id="demo1">
+        <input type="text" id="user-text">
+        <button onclick="toLowerCase()">toLowerCase()</button>
+        <button onclick="toUpperCase()">toUpperCase()</button>
+        <button onclick="length()">length</button>
+        <button onclick="trim()">trim()</button>
+        <button onclick="trimStart()">trimStart()</button>
+        <button onclick="trimEnd()">trimEnd()</button>
+        <button onclick="repeat()">repeat()</button>
+        <button onclick="replace()">replace()</button>
+        <button onclick="replaceAll()">replaceAll()</button>
+       
+        </div>
+      
+        <div id="strvalue">
+        <input type="number" id="number" placeholder="enter number" >
+        <button onclick="performance">perform</button>
+    </div>
+    <div id="strtext">
+        <input type="text" id="text" placeholder="enter value">
+        <button onclick="performance">perform</button>
+    </div>
+        <p id="output"></p>
+        <script>
+             document.getElementById("strvalue").style.display="none";
+             document.getElementById("strtext").style.display="none";
+       
+       function toLowerCase() {
+             text_to_change = document.getElementById("user-text").value;
+             updated_text = text_to_change.toLowerCase();
+            document.getElementById("output").style.display = 'block';
+            document.getElementById("output").innerHTML = updated_text;
+        }
+
+        function toUpperCase() {
+             text_to_change = document.getElementById("user-text").value;
+             updated_text = text_to_change.toUpperCase();
+            document.getElementById("output").style.display = 'block';
+            document.getElementById("output").innerHTML = updated_text;
+        }
+        function length(){
+            text_to_change = document.getElementById("user-text").value;
+             updated_text = text_to_change.length;
+            document.getElementById("output").style.display = 'block';
+            document.getElementById("output").innerHTML ="length:"+ updated_text;
+            
+        }
+        function trim() {
+            text_to_change = document.getElementById("user-text").value;
+           updated_text = text_to_change.trim(); 
+            document.getElementById("output").style.display = 'block';
+            document.getElementById("output").innerHTML ="trimmed string:"+ updated_text;
+        }
+        function trimStart() {
+            text_to_change = document.getElementById("user-text").value;
+           updated_text = text_to_change.trimStart(); 
+            document.getElementById("output").style.display = 'block';
+            document.getElementById("output").innerHTML ="string trimstart: "+ updated_text;
+        }
+        function trimEnd() {
+            text_to_change = document.getElementById("user-text").value;
+           updated_text = text_to_change.trimEnd(); 
+            document.getElementById("output").style.display = 'block';
+            document.getElementById("output").innerHTML ="string trimEnd: "+ updated_text;
+        }
+        function repeat() {
+            document.getElementById("demo1").style.display="none";
+            document.getElementById("strvalue").style.display="block";
+           
+        }
+        function replace(){
+            document.getElementById("demo1").style.display="none";
+            document.getElementById("strtext").style.display="block";
+
+        }
+        
+
+        
+        </script>
+    </body>
+    
+    </html>
